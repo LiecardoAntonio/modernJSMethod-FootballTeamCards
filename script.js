@@ -172,6 +172,8 @@ const myFavoriteFootballTeam = {
   ],
 };
  
+Object.freeze(myFavoriteFootballTeam); //ensure that you can't modify this object by adding or removing any properties
 
+const sport = myFavoriteFootballTeam.sport;
 
 

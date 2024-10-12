@@ -1,0 +1,8 @@
+FCC Modern JS Method - Building Football Team Cards
+
+Content: 
+
+1. Object.freeze(obj)
+  > We are going to use a method called Object.freeze(obj) which will freeze this object and prevent any changes being made to it.
+
+2. 
