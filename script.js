@@ -174,6 +174,20 @@ const myFavoriteFootballTeam = {
  
 Object.freeze(myFavoriteFootballTeam); //ensure that you can't modify this object by adding or removing any properties
 
-const sport = myFavoriteFootballTeam.sport;
+// assigning value of object into a variable
+//1. traditional way
+// const sport = myFavoriteFootballTeam.sport;
+// const team = myFavoriteFootballTeam.team;
 
+//2. JS Object destructuring method
+const { sport, team, year, players } = myFavoriteFootballTeam;
+const {coachName} = myFavoriteFootballTeam.headCoach; // object destructuring from object inside an object
+
+typeOfSport.textContent = sport;
+teamName.textContent = team;
+worldCupYear.textContent = year;
+headCoach.textContent = coachName;
+
+//function to filter the cards
+playerCards.innerHTML +=  arr.map(() => {});
 
