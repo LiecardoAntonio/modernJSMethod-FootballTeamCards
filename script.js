@@ -189,5 +189,17 @@ worldCupYear.textContent = year;
 headCoach.textContent = coachName;
 
 //function to filter the cards
-playerCards.innerHTML +=  arr.map(() => {});
+playerCards.innerHTML += arr.map(({name, position, number, isCaptain, nickname}) => {
+  // the parameter will unpack the attribute name, etc from the parameter passed to the arrow function
+  `
+    <div class="player-card">
+      <h2>${isCaptain ? "(Captain)" : ""}${name}</h2> 
+      <p>Position: ${position}</p>
+      <p>Number: ${number}</p>
+      <p>Nickname: ${nickname ? nickname : "N/A"}</p>
+    </div>
+  `
+
+}).join("");
+
 
