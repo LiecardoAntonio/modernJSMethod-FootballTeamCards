@@ -29,7 +29,7 @@ Content:
   console.log(greeting("John")); // Hello John
   console.log(greeting()); // Hello Anonymous
 
-5. (RECALL) arr.map(() => {})
+5. (RECALL + NEW) arr.map(() => {})
   > (!new knowledge)
     The .map() method will return a new array items separated by commas. To remove the commas between each items in array so it does not show up on screen, chain the .join() method to the .map() method. And you need to pass an empty string as the argument for the .join() method.
   > ex:
@@ -46,3 +46,23 @@ Content:
     }
   ).join("");
 
+6. 'e' parameter in event listener
+  > e represents an object which contains the information for that event.
+  > ex:
+  playersDropdownList.addEventListener('change', (e) => {
+    console.log(e.target.value);
+  });
+
+7. e.target.value
+  > The reason you need to use e.target is because the change event provides information about the event itself, not directly about the element that triggered it. The target property of the event object (e) refers to the DOM element that triggered the event—in this case, your dropdown (playersDropdownList).
+  > e represents the event object, which contains details about the event.
+  > e.target is a reference to the actual element that fired the event.
+  > e.target.value accesses the value property of the element, which is the currently selected option in the dropdown.
+  > The use of e.target is common for all event-related inputs and not limited to dropdowns. ex usecase: Text inputs, Checkboxes, Radio buttons, Forms, etc.
+
+8. (RECALL) arr.filter((param)=>param_condition_to_return)
+  > return the filtered arr based on the condition
+  > ex:
+    setPlayerCards(players.filter((player) => player.nickname !== null));
+
+9. 
